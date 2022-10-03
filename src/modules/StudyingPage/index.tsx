@@ -5,10 +5,6 @@ import { steps } from '../../library/constants/steps'
 const { Title, Paragraph, } = Typography;
 const { Step } = Steps;
 
-// interface StepsProps{
-//     stepData: Steps;
-// }
-
 export const StudyingPage: React.FC<{}> = (el) => {
     const [current, setCurrent] = useState(0);
 
@@ -19,7 +15,6 @@ export const StudyingPage: React.FC<{}> = (el) => {
     const prev = () => {
         setCurrent(current - 1);
     };
-
 
     return (
         <div>
@@ -32,10 +27,6 @@ export const StudyingPage: React.FC<{}> = (el) => {
             </Typography>
             <Steps current={current}>
                 {steps.map((item) => {
-                    console.log(item, 'item')
-                    const x = () => {
-
-                    }
                     return (
                         <Step key={item.title} title={item.title} />
                     )

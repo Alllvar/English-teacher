@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
-import  {TableForm } from '../../components/Table';
+import  { TableForm } from '../../components/Table';
 import type { LearnPageProps } from '../../library/types/irregular-verbs'
 import {
     Divider,
-    Typography,
-    Layout,
-    Menu
+    Typography
 } from 'antd';
-import {
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
-    UploadOutlined,
-    FileSearchOutlined,
-    VideoCameraOutlined,
-} from '@ant-design/icons';
 import './index.css'
 
 const { Title, Paragraph, } = Typography;

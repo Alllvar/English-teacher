@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { Divider, Typography, Button, message, Steps } from 'antd';
-import {TableForm} from "../../components/Table";
+import React from 'react';
+import { Divider, Typography } from 'antd';
+import { TableForm } from '../../components/Table';
 
 const { Title, Paragraph, } = Typography;
-const { Step } = Steps;
 
 export const CompetitionPage: React.FC = () => {
     return (

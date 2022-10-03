@@ -1,4 +1,4 @@
-import {FC, ReactElement, ReactNode} from 'react';
+import { ReactNode } from 'react';
 
 export type Steps = {
     title: string

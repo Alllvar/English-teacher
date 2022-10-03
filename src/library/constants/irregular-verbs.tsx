@@ -1,7 +1,7 @@
 import { ColumnsType } from 'antd/es/table';
-import type { IrregularVerbs, IrregularVerbsForm } from '../types/irregular-verbs';
+import type { IrregularVerb } from '../types/irregular-verbs';
 
-export const columns: ColumnsType<IrregularVerbs> = [
+export const columns: ColumnsType<IrregularVerb> = [
     {
         key: 'name',
         title: 'Name',
@@ -9,7 +9,7 @@ export const columns: ColumnsType<IrregularVerbs> = [
     },
 ];
 
-export const data: IrregularVerbs[] = [
+export const data: IrregularVerb[] = [
     {
         key: 0,
         verb: 'be',
@@ -123,25 +123,25 @@ export const data: IrregularVerbs[] = [
         translate: 'знати',
     },
 ];
-
-export const dataForm: IrregularVerbsForm[] = [
-    {
-        key: 0,
-        verb: 'be',
-        // secondForm: 'was/were',
-        secondForm:
-            <span>
-                <a href="" >Edit</a>
-                <span className="ant-divider"/>
-                <a href="" >Delete</a>
-            </span>
-        ,
-        thirdForm:
-            <span>
-                <a href="" >Edit</a>
-                <span className="ant-divider"/>
-                <a href="" >Delete</a>
-            </span>,
-        translate: 'бути',
-    },
-];
+//
+// export const dataForm: IrregularVerbsForm[] = [
+//     {
+//         key: 0,
+//         verb: 'be',
+//         // secondForm: 'was/were',
+//         secondForm:
+//             <span>
+//                 <a href="" >Edit</a>
+//                 <span className="ant-divider"/>
+//                 <a href="" >Delete</a>
+//             </span>
+//         ,
+//         thirdForm:
+//             <span>
+//                 <a href="" >Edit</a>
+//                 <span className="ant-divider"/>
+//                 <a href="" >Delete</a>
+//             </span>,
+//         translate: 'бути',
+//     },
+// ];

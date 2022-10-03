@@ -1,6 +1,6 @@
 import {ReactNode, FC} from "react";
 
-export type IrregularVerbs = {
+export type IrregularVerb = {
     key: number
     verb: string
     secondForm: string
@@ -8,13 +8,13 @@ export type IrregularVerbs = {
     translate: string
 }
 
-export type IrregularVerbsForm = {
-    key: number
-    verb: string
-    secondForm: JSX.Element
-    thirdForm: JSX.Element
-    translate: string
-}
+// export type IrregularVerbsForm = {
+//     key: number
+//     verb: string
+//     secondForm: JSX.Element
+//     thirdForm: JSX.Element
+//     translate: string
+// }
 
 export type LearnPageProps = {
     words: string[]
