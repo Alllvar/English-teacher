@@ -1,10 +1,11 @@
-import React from 'react';
-import { Divider, Typography } from 'antd';
+import React, { useState } from 'react';
+import { Divider, Typography, Button } from 'antd';
 import { TableForm } from '../../components/Table';
 
 const { Title, Paragraph, } = Typography;
 
 export const CompetitionPage: React.FC = () => {
+    const [isStartedChallange, setIsStartedChallange] = useState(false)
     return (
         <div>
             <Typography>
@@ -14,8 +15,9 @@ export const CompetitionPage: React.FC = () => {
                 </Paragraph>
                 <Divider />
             </Typography>
+                <TableForm mode="competition"/>
 
-            <TableForm mode="competition"/>
+
         </div>
     );
 }

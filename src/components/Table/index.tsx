@@ -6,7 +6,7 @@ import { IrregularVerb } from '../../library/types/irregular-verbs';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import 'antd/dist/antd.css';
 import './index.css'
-import { Challange } from './Challange';
+import { Challenge } from './Challange';
 
 enum GenderEnum {
     female = "female",
@@ -33,7 +33,7 @@ export const TableForm: React.FC<{ mode: string }> = ({ mode}) => {
                     <Table.Column<IrregularVerb> key="key" title="Third Form" dataIndex="thirdForm" />
                     <Table.Column<IrregularVerb> key="key" title="Translate" dataIndex="translate" />
                 </Table>
-                : <Challange />
+                : <Challenge />
             }
         </div>
     )
