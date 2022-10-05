@@ -1,40 +1,38 @@
-import React from 'react';
-import ReactDOM from "react-dom";
-import { Form, Table, } from 'antd';
-import { columns, data } from '../../library/constants/irregular-verbs'
-import { IrregularVerb } from '../../library/types/irregular-verbs';
-import { useForm, SubmitHandler } from 'react-hook-form';
-import 'antd/dist/antd.css';
-import './index.css'
-import { Challenge } from './Challange';
+import { Table } from 'antd';
+import type { FC } from 'react';
+import type { IrregularVerbExtended } from 'library/types/data';
 
-enum GenderEnum {
-    female = "female",
-    male = "male",
-    other = "other"
-}
+type SourceTableProps = {
+  data: IrregularVerbExtended[]
+  results?: null | { [key: string]: number | null }
+};
 
-interface IFormInput {
-    verb: String;
-    secondForm: GenderEnum;
-}
+const SourceTable: FC<SourceTableProps> = ({ data, results }) => (
+  <div className="table-container">
+    <Table<IrregularVerbExtended>
+      dataSource={data}
+      bordered
+      pagination={false}
+      rowClassName={(_, index) => {
+        if (results) {
+          const key = data[index]?.key;
 
-export const TableForm: React.FC<{ mode: string }> = ({ mode}) => {
-    return (
-        <div className="table-container">
-            {mode === 'introduction'
-                ? <Table<IrregularVerb>
-                    dataSource={data}
-                    bordered
-                    pagination={false}
-                >
-                    <Table.Column<IrregularVerb> key="key" title="Verb" dataIndex="verb" />
-                    <Table.Column<IrregularVerb> key="key" title="Second Form" dataIndex="secondForm" />
-                    <Table.Column<IrregularVerb> key="key" title="Third Form" dataIndex="thirdForm" />
-                    <Table.Column<IrregularVerb> key="key" title="Translate" dataIndex="translate" />
-                </Table>
-                : <Challenge />
-            }
-        </div>
-    )
-}
+          if (results[key]) {
+            return 'success';
+          }
+
+          return 'error';
+        }
+
+        return '';
+      }}
+    >
+      <Table.Column<IrregularVerbExtended> key="key" title="Verb" dataIndex="verb" />
+      <Table.Column<IrregularVerbExtended> key="key" title="Second Form" dataIndex="secondForm" />
+      <Table.Column<IrregularVerbExtended> key="key" title="Third Form" dataIndex="thirdForm" />
+      <Table.Column<IrregularVerbExtended> key="key" title="Translate" dataIndex="translate" />
+    </Table>
+  </div>
+);
+
+export default SourceTable;

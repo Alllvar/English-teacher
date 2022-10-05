@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
+    "baseUrl": "src",
+    "paths": {
+      "library": ["library/*"],
+      "store": ["store/*"]
+    },
     "lib": [
       "dom",
       "dom.iterable",
