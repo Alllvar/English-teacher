@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/english-teacher/static/css/main.15ba83cd.css",
+    "main.js": "/english-teacher/static/js/main.b86c891a.js",
+    "index.html": "/english-teacher/index.html",
+    "main.15ba83cd.css.map": "/english-teacher/static/css/main.15ba83cd.css.map",
+    "main.b86c891a.js.map": "/english-teacher/static/js/main.b86c891a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15ba83cd.css",
+    "static/js/main.b86c891a.js"
+  ]
+}
