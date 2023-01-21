@@ -120,7 +120,9 @@ input[type="submit"] {
 }
 
 button[type="button"] {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     appearance: none;
     background: #333;
     color: white;

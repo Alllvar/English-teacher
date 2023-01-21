@@ -62,7 +62,7 @@ const fail = createAction<any, typeof FAIL_CHALLENGE>(FAIL_CHALLENGE);
 const challenge = createReducer(initialVerbsState, (builder) => builder
   .addCase(start, (state) => {
     state.startedAt = Date.now();
-    state.deadline = Date.now() + 1000 * 30;
+    state.deadline = Date.now() + 1000 * 160;
     state.quiz = getNewQuizData(state.source);
     state.result = {};
 

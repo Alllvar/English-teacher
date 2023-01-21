@@ -76,6 +76,12 @@ function Quiz() {
     dispatch({ type: FAIL_CHALLENGE });
   };
 
+  const handleKeypress = (e: any) => {
+    if (e.keyCode === 13 && isValid) {
+      handleContinue();
+    }
+  };
+
   const renderField = (field: FieldArrayWithId, fieldIndex: number) => {
     const isDisabled = rowData.forms[fieldIndex] !== '';
 
@@ -91,6 +97,7 @@ function Quiz() {
         }
         key={field.id}
         style={FIELD_STYLES}
+        onKeyDown={handleKeypress}
       />
     );
   };
