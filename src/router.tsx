@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import {
   Layout,
 } from 'antd';
@@ -19,7 +19,7 @@ const AppRouter: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Sidebar collapsed={collapsed} />
         <Layout className="site-layout">
@@ -37,7 +37,7 @@ const AppRouter: React.FC = () => {
           </Content>
         </Layout>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
